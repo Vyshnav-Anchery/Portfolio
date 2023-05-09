@@ -255,21 +255,26 @@
 function validatename(inputText) {
   var x = document.form1.name.value;
   var y = /^[A-Za-z\s]+$/.test(x);
-  if (y == false) {
-    document.getElementById("nme").innerHTML = "name must only contain alphabets";
+  var mail= document.form1.email.value;
+  if(y=="" && mail==""){
+    window.alert("Fill in the form");
+    
+  }
+  else if (y == false) {
+    document.getElementById("name-error").innerHTML = "name must only contain alphabets";
     return false;
   }
   else {
-    document.getElementById("nme").innerHTML = "";
-    var mail= document.form1.email.value;
+    document.getElementById("name-error").innerHTML = "";
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (mail.match(mailFormat)) {
-      document.getElementById("invalid").innerHTML = "";
+      document.getElementById("mail-error").innerHTML = "";
       document.getElementById("form1").submit();
+      // location.reload();
       return true;
     } 
     else {
-      document.getElementById("invalid").innerHTML = "invalid email";
+      document.getElementById("mail-error").innerHTML = "invalid email";
       return false;
     }
   }

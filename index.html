@@ -657,14 +657,13 @@
                         </div>action="https://formspree.io/f/xknayeda"
                       </form> -->
                       <form class="row" action="https://formspree.io/f/xknayeda" method="post" name="form1" id="form1">
-                        <small id="nme"></small>
+                        <small id="name-error"></small>
                         <input class="mb-3" onchange="" type="text" id="name" name="name" placeholder="Name" required><br>
-                        <small id="invalid"></small>
+                        <small id="mail-error"></small>
                         <input class="mb-3" onchange="" type="email" id="email" name="email" placeholder="Email" required><br>
                         <input class="mb-3" type="text" name="subject" id="subject" placeholder="Subject">
-                        <textarea class="mb-3" onchange="sub()" type="text" name="message" id="message" placeholder="Message"></textarea><br>
-                        <small id="asas"></small>
-                        <input type="button" value="Send Message" onclick="validatename(document.form1.name)" class="button button-a button-big button-rouded">
+                        <textarea class="mb-3" type="text" name="message" id="message" placeholder="Message"></textarea><br>
+                        <input type="button"  value="Submit" onclick="validatename(document.form1.name)" class="button button-a button-big button-rouded">
                       </form>
                     </div>
                   </div>
