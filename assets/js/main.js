@@ -269,7 +269,7 @@ function validatename(inputText) {
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (mail.match(mailFormat)) {
       document.getElementById("mail-error").innerHTML = "";
-      document.getElementById("form1").submit();
+      // document.getElementById("form1").submit();
       // location.reload();
       return true;
     } 
